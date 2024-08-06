@@ -3,10 +3,15 @@ const morgan=require('morgan');
 const cors=require('cors');
 const colors=require('colors');
 const bodyParser=require('body-parser');
-const dotenv=require('dotenv')
+const dotenv=require('dotenv');
+const connectDB = require('./config/db');
+
 
 //dotenv 
 dotenv.config()
+
+//mongo connection
+connectDB();
 
 //rest object
 const app=express()
